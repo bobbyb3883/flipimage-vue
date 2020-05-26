@@ -1,5 +1,5 @@
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {
     appname: "Image Flipper",
     images: [
@@ -12,8 +12,9 @@ new Vue({
     ]
   },
   method: {
-    flipImage(){
-
+    flipImage() {
+      var img = document.getElementById("image");
+      img.setAttribute("style", "transform:rotate(180deg)");
     }
   }
-})
+});
