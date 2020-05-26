@@ -22,4 +22,3 @@ var vue = new Vue({
     }
   }
 });
-S
