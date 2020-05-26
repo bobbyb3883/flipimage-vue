@@ -12,9 +12,9 @@ new Vue({
     ]
   },
   method: {
-    flipImage() {
-      var img = document.getElementById("image");
-      img.setAttribute("style", "transform:rotate(180deg)");
+    flipImage(img) {
+      var imgStyle = document.getElementById(img);
+      imgStyle.setAttribute("style", "transform:rotate(180deg)");
     }
   }
 });
