@@ -37,7 +37,7 @@
 			<div class="container py-2" v-for="img in images">
 				<div class="card text-center">
 					<div class="card-body">
-						<img :src=img class="img-fluid rounded" style="width:50%" id=img>
+						<img :src=img class="img-fluid rounded" style="width:50%" :id=img>
 					</div>
            <div class="card-body"> 
 						<button v-on:click="flipImage(img)" type="button" class="btn btn-outline-primary">
