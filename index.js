@@ -11,7 +11,7 @@ var vue = new Vue({
       "https://images.unsplash.com/photo-1590390057769-0dce1c9db9f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=928&q=80"
     ]
   },
-  method: {
+  methods: {
     flipImage: function (img) {
       var imgStyle = document.getElementById(img);
       imgStyle.setAttribute("style", "transform:rotate(180deg)");
