@@ -14,11 +14,25 @@ var vue = new Vue({
   methods: {
     flipImage: function(img) {
       var imgStyle = document.getElementById(img);
-      // imgStyle.setAttribute("style", "transform:rotate(90deg)");
-      // console.log(imgStyle);
-      // console.log(imgStyle.transform);
-      
-      imgStyle.style.transform = "rotate(180deg)";
+      console.log(imgStyle);
+      console.log(imgStyle.style.transform.match(/\d+/));
+      let rotation = imgStyle.style.transform.match(/\d+/)
+      switch (rotation) {
+        case 0:
+          imgStyle.style.transform = "rotate(90deg)";
+          break;
+        case 90:
+          imgStyle.style.transform = "rotate(180deg)";
+          break;
+        case 180:
+          imgStyle.style.transform = "rotate(270deg)";
+          break;
+        case 270:
+          imgStyle.style.transform = "rotate(0deg)";
+          break;
+        default:
+          imgStyle.style.transform = "rotate(0deg)";
+      }
     }
   }
 });
