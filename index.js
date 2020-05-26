@@ -14,24 +14,22 @@ var vue = new Vue({
   methods: {
     flipImage: function(img) {
       var imgStyle = document.getElementById(img);
-      console.log(imgStyle);
-      console.log(imgStyle.style.transform.match(/\d+/));
-      let rotation = imgStyle.style.transform.match(/\d+/)
+      let rotation = imgStyle.style.transform
       switch (rotation) {
-        case 0:
+        case 'rotate(0deg)':
           imgStyle.style.transform = "rotate(90deg)";
           break;
-        case 90:
+        case 'rotate(90deg)':
           imgStyle.style.transform = "rotate(180deg)";
           break;
-        case 180:
+        case 'rotate(180deg)':
           imgStyle.style.transform = "rotate(270deg)";
           break;
-        case 270:
+        case 'rotate(270deg)':
           imgStyle.style.transform = "rotate(0deg)";
           break;
         default:
-          imgStyle.style.transform = "rotate(0deg)";
+          imgStyle.style.transform = "rotate(90deg)";
       }
     }
   }
