@@ -15,8 +15,8 @@ var vue = new Vue({
     flipImage: function(img) {
       var imgStyle = document.getElementById(img);
       // imgStyle.setAttribute("style", "transform:rotate(90deg)");
-      console.log(imgStyle);
-      console.log(imgStyle.transform);
+      // console.log(imgStyle);
+      // console.log(imgStyle.transform);
       
       imgStyle.style.transform = "rotate(180deg)";
     }
